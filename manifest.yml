@@ -2,4 +2,5 @@ applications:
   - name: hello-elixir
     buildpack: https://github.com/HashNuke/heroku-buildpack-elixir.git
     memory: 1G
-    command:  PORT=8080 mix run --no-halt
+    services:
+      - elixir-PG-DB
